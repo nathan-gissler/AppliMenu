@@ -13,12 +13,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.ViewHolder> {
 
-    private ArrayList<Recette> recettes = new ArrayList<>();
+    private ArrayList<Recipe> recipes = new ArrayList<>();
 
-    public void setRecettes(ArrayList<Recette> recettes) {
-        this.recettes = recettes;
+    public void setRecipes(ArrayList<Recipe> recipes) {
+        this.recipes = recipes;
         notifyDataSetChanged();
     }
 
@@ -36,7 +36,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             super(view);
             // Define click listener for the ViewHolder's View
 
-            textView = (TextView) view.findViewById(R.id.textRecette);
+            textView = (TextView) view.findViewById(R.id.textRecipe);
             image = view.findViewById(R.id.image);
         }
 
@@ -45,17 +45,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         }
     }
 
-//    /**
-//     * Initialize the dataset of the Adapter
-//     *
-//     * @param dataSet String[] containing the data to populate views to be used
-//     * by RecyclerView
-//     */
-//    public CustomAdapter(String[] dataSet) {
-//        localDataSet = dataSet;
-//    }
-
-    public CustomAdapter(Context context) {
+    public RecipeListAdapter(Context context) {
         this.context = context;
     }
 
@@ -64,7 +54,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.recette_list_item, viewGroup, false);
+                .inflate(R.layout.recipe_list_item, viewGroup, false);
 
         return new ViewHolder(view);
     }
@@ -75,17 +65,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.getTextView().setText(recettes.get(position).toString());
+        viewHolder.getTextView().setText(recipes.get(position).toString());
 
         Glide.with(context)
                 .asBitmap()
-                .load(recettes.get(position).getImgUrl())
+                .load(recipes.get(position).getImgUrl())
                 .into(viewHolder.image);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return recettes.size();
+        return recipes.size();
     }
 }

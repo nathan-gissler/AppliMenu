@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Title">
+        <item name="android:fontFamily">@font/fira_sans_semibold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubTitleButton">
+        <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="SubTitleButtonBlack" parent="SubTitleButton">
+        <item name="color">@color/black</item>
+    </style>
+    <style name="SubTitleButtonBurntSienna" parent="SubTitleButton">
+        <item name="color">@color/burnt_sienna</item>
+    </style>
+    <style name="Text">
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:textSize">15sp</item>
+        <item name="color">@color/black</item>
+    </style>
+</resources>

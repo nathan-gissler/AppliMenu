@@ -1,10 +1,10 @@
 package com.example.applimenu;
 
-public class Recette {
+public class Recipe {
     public String name;
     public String imgUrl;
 
-    public Recette(String name, String imgUrl) {
+    public Recipe(String name, String imgUrl) {
         this.name = name;
         this.imgUrl = imgUrl;
     }
