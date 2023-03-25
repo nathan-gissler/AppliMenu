@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class RecipeBookActivity extends AppCompatActivity {
     private RecyclerView recyclerFavoriteRecipes;
 
     private RecyclerView recyclerPersonalRecipes;

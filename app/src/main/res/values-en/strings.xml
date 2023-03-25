@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppliMenu</string>
+    <string name="my_recipe_book">My recipe book</string>
+    <string name="favorite_recipes">My favorite recipes</string>
+    <string name="personal_recipes">My personal recipes</string>
+    <string name="add_personal_recipe">Add a personal recipe</string>
+    <string name="logo_heart">Logo heart</string>
+    <string name="ingredients">Ingredients</string>
+</resources>

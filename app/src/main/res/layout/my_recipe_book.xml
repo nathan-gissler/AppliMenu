@@ -10,11 +10,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Mon carnet"
+        android:text="@string/my_recipe_book"
         app:layout_constraintBottom_toTopOf="@id/favoriteRecipes"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
         android:id="@+id/favoriteRecipes"
@@ -22,31 +22,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textMyRecipeBook">
 
-        <LinearLayout
-            android:id="@+id/titleFavoriteRecipes"
+        <TextView
+            android:id="@+id/textFavoriteRecipes"
+            style="@style/SubTitleButtonBurntSienna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/textFavoriteRecipes"
-                style="@style/SubTitleButtonBurntSienna"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mes recettes favorites"></TextView>
-
-            <ImageView
-                android:id="@+id/heartFavoriteRecipes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/heart"></ImageView>
-        </LinearLayout>
+            android:text="@string/favorite_recipes"
+            app:drawableRightCompat="@drawable/heart" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerFavoriteRecipes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/titleFavoriteRecipes"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_below="@id/textFavoriteRecipes" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -60,13 +48,13 @@
             style="@style/SubTitleButtonBurntSienna"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mes recettes personnelles"></TextView>
+            android:text="@string/personal_recipes" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerPersonalRecipes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textPersonalRecipes"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_below="@+id/textPersonalRecipes" />
 
         <Button
             android:id="@+id/buttonAddRecipe"
@@ -74,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/recyclerPersonalRecipes"
-            android:text="Ajouter une recette personnelle"></Button>
+            android:text="@string/add_personal_recipe" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
