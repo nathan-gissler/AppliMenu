@@ -7,4 +7,15 @@
     <string name="add_personal_recipe">Add a personal recipe</string>
     <string name="logo_heart">Logo heart</string>
     <string name="ingredients">Ingredients</string>
+    <string name="add_recipe">Add a recipe</string>
+    <string name="add_recipe_name">Name :</string>
+    <string name="add_recipe_ingredient">Ingredients :</string>
+    <string name="add_recipe_step">Steps :</string>
+    <string name="edit_text_add_recipe_name">Title of the recipe...</string>
+    <string name="edit_text_add_recipe_ingredient">Ingredient...</string>
+    <string name="edit_text_add_recipe_ingredient_quantity">Quantity...</string>
+    <string name="button_add_recipe_ingredient">Add an ingredient</string>
+    <string name="edit_text_add_recipe_step">Step...</string>
+    <string name="button_add_recipe_step">Add a step</string>
+    <string name="button_save_recipe">Save my recipe</string>
 </resources>

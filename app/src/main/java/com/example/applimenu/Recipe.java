@@ -1,20 +1,30 @@
 package com.example.applimenu;
 
-public class Recipe {
-    public String name;
-    public String imgUrl;
+import java.util.ArrayList;
 
+public class Recipe {
+    private String name;
+    private String imgUrl;
+
+    private ArrayList<QuantifiedIngredient> quantifiedIngredients;
+
+    private ArrayList<Step> steps;
+
+    // TODO : améliorer ça
     public Recipe(String name, String imgUrl) {
         this.name = name;
         this.imgUrl = imgUrl;
     }
 
-    public String getName() {
-        return name;
+    public Recipe(String name, String imgUrl, ArrayList<QuantifiedIngredient> quantifiedIngredients, ArrayList<Step> steps) {
+        this.name = name;
+        this.imgUrl = imgUrl;
+        this.quantifiedIngredients = quantifiedIngredients;
+        this.steps = steps;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -28,5 +38,13 @@ public class Recipe {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public ArrayList<QuantifiedIngredient> getQuantifiedIngredients() {
+        return quantifiedIngredients;
+    }
+
+    public ArrayList<Step> getSteps() {
+        return steps;
     }
 }

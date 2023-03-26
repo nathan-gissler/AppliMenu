@@ -1,5 +1,6 @@
 package com.example.applimenu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -56,7 +57,9 @@ public class RecipeBookActivity extends AppCompatActivity {
         buttonAddRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BUTTONS", "Add recipe clicked");
+                Intent intent = new Intent(RecipeBookActivity.this, AddRecipeActivity.class);
+
+                startActivity(intent);
             }
         });
     }

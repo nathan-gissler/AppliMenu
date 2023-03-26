@@ -6,4 +6,15 @@
     <string name="add_personal_recipe">Ajouter une recette personnelle</string>
     <string name="logo_heart">Logo cœur</string>
     <string name="ingredients">Ingrédients</string>
+    <string name="add_recipe">Ajouter une recette</string>
+    <string name="add_recipe_name">Nom :</string>
+    <string name="add_recipe_ingredient">Ingrédients :</string>
+    <string name="add_recipe_step">Étapes :</string>
+    <string name="edit_text_add_recipe_name">Renseigner le titre de la recette...</string>
+    <string name="edit_text_add_recipe_ingredient">Renseigner un ingrédient...</string>
+    <string name="edit_text_add_recipe_ingredient_quantity">Quantité...</string>
+    <string name="button_add_recipe_ingredient">Ajouter un ingrédient</string>
+    <string name="edit_text_add_recipe_step">Renseigner une étape...</string>
+    <string name="button_add_recipe_step">Ajouter une étape</string>
+    <string name="button_save_recipe">Enregistrer ma recette</string>
 </resources>
