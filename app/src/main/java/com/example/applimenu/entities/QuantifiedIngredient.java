@@ -1,4 +1,6 @@
-package com.example.applimenu;
+package com.example.applimenu.entities;
+
+import com.example.applimenu.entities.Ingredient;
 
 public class QuantifiedIngredient {
 

@@ -1,4 +1,4 @@
-package com.example.applimenu;
+package com.example.applimenu.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.applimenu.R;
+import com.example.applimenu.entities.Step;
 
 import java.util.ArrayList;
 
@@ -51,7 +54,7 @@ public class StepListAdapter extends RecyclerView.Adapter<StepListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        viewHolder.getTextViewNumber().setText("Etape " + position);
+        viewHolder.getTextViewNumber().setText("Etape " + (position + 1));
         viewHolder.getTextViewText().setText(steps.get(position).toString());
     }
 

@@ -1,4 +1,4 @@
-package com.example.applimenu;
+package com.example.applimenu.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.applimenu.R;
+import com.example.applimenu.activities.RecipeActivity;
+import com.example.applimenu.entities.Recipe;
 
 import java.util.ArrayList;
 

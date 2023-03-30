@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <ImageButton
+        android:id="@+id/buttonBackRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/arrow_back"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recipeNameAndIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/buttonBackRecipe">
 
         <TextView
             android:id="@+id/recipeName"
+            style="@style/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Title"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
             android:id="@+id/recipeIngredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recipeName">
+            android:layout_below="@id/recipeName"
+            app:layout_constraintTop_toBottomOf="@id/recipeName">
 
             <TextView
                 android:id="@+id/textIngredients"
+                style="@style/SubTitleButtonBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ingredients"
-                style="@style/SubTitleButtonBlack"/>
+                android:layout_centerHorizontal="true"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ingredientList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textIngredients" />
+                android:layout_below="@id/textIngredients"
+                android:layout_centerHorizontal="true"/>
 
         </RelativeLayout>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/stepList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recipeNameAndIngredients"/>
+        app:layout_constraintTop_toBottomOf="@id/recipeNameAndIngredients" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

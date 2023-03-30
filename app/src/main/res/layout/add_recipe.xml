@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/buttonBackAddRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/arrow_back"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textAddRecipe"
@@ -13,7 +22,7 @@
         android:text="@string/add_recipe"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonBackAddRecipe" />
 
     <TextView
         android:id="@+id/textAddRecipeName"
@@ -22,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="@string/add_recipe_name"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAddRecipe"/>
+        app:layout_constraintTop_toBottomOf="@+id/textAddRecipe" />
 
     <EditText
         android:id="@+id/editTextAddRecipeName"
@@ -32,7 +41,7 @@
         android:text="@string/edit_text_add_recipe_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textAddRecipeName"/>
+        app:layout_constraintTop_toBottomOf="@id/textAddRecipeName" />
 
     <TextView
         android:id="@+id/textAddRecipeIngredient"
@@ -41,7 +50,15 @@
         android:layout_height="wrap_content"
         android:text="@string/add_recipe_ingredient"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAddRecipeName"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddRecipeName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAddIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAddRecipeIngredient" />
 
     <EditText
         android:id="@+id/editTextAddRecipeIngredient"
@@ -51,7 +68,7 @@
         android:text="@string/edit_text_add_recipe_ingredient"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/editTextAddRecipeIngredientQuantity"
-        app:layout_constraintTop_toBottomOf="@id/textAddRecipeIngredient"/>
+        app:layout_constraintTop_toBottomOf="@id/recyclerAddIngredient" />
 
     <EditText
         android:id="@+id/editTextAddRecipeIngredientQuantity"
@@ -61,7 +78,7 @@
         android:text="@string/edit_text_add_recipe_ingredient_quantity"
         app:layout_constraintLeft_toRightOf="@id/editTextAddRecipeIngredient"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textAddRecipeIngredient" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerAddIngredient"/>
 
     <Button
         android:id="@+id/buttonAddRecipeIngredient"
@@ -71,7 +88,7 @@
         android:text="@string/button_add_recipe_ingredient"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAddRecipeIngredient"/>
+        app:layout_constraintTop_toBottomOf="@id/editTextAddRecipeIngredient" />
 
     <TextView
         android:id="@+id/textAddRecipeStep"
@@ -80,7 +97,15 @@
         android:layout_height="wrap_content"
         android:text="@string/add_recipe_step"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAddRecipeIngredient"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddRecipeIngredient" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAddStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAddRecipeStep" />
 
     <EditText
         android:id="@+id/editTextAddRecipeStep"
@@ -90,7 +115,7 @@
         android:text="@string/edit_text_add_recipe_step"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textAddRecipeStep"/>
+        app:layout_constraintTop_toBottomOf="@id/recyclerAddStep"/>
 
     <Button
         android:id="@+id/buttonAddRecipeStep"
@@ -100,7 +125,7 @@
         android:text="@string/button_add_recipe_step"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAddRecipeStep"/>
+        app:layout_constraintTop_toBottomOf="@id/editTextAddRecipeStep" />
 
     <Button
         android:id="@+id/buttonSaveRecipe"
@@ -108,8 +133,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_save_recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

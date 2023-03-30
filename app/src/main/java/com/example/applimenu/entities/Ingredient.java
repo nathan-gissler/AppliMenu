@@ -1,4 +1,4 @@
-package com.example.applimenu;
+package com.example.applimenu.entities;
 
 public class Ingredient {
     private String name;

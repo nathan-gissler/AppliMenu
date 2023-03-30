@@ -17,4 +17,5 @@
     <string name="edit_text_add_recipe_step">Renseigner une étape...</string>
     <string name="button_add_recipe_step">Ajouter une étape</string>
     <string name="button_save_recipe">Enregistrer ma recette</string>
+    <string name="arrow_back">Arrow back</string>
 </resources>
