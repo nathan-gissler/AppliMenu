@@ -9,7 +9,7 @@ import com.example.applimenu.converters.QuantifiedIngredientConverter;
 import com.example.applimenu.converters.StepConverter;
 import com.example.applimenu.dao.RecipeDao;
 
-@Database(entities = {Recipe.class}, version = 1)
+@Database(entities = {Recipe.class}, version = 2)
 @TypeConverters({QuantifiedIngredientConverter.class, StepConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
     public abstract RecipeDao recipeDao();

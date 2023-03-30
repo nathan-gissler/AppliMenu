@@ -54,6 +54,8 @@ public class AddRecipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 quantifiedIngredients.add(new QuantifiedIngredient(editTextAddRecipeIngredient.getText().toString(), Integer.parseInt(editTextAddRecipeIngredientQuantity.getText().toString())));
+                editTextAddRecipeIngredient.setText("");
+                editTextAddRecipeIngredientQuantity.setText("");
             }
         });
 
@@ -73,6 +75,7 @@ public class AddRecipeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 steps.add(new Step(editTextAddRecipeStep.getText().toString()));
+                editTextAddRecipeStep.setText("");
             }
         });
 

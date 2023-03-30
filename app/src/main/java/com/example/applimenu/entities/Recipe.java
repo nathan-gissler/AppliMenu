@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Entity
 public class Recipe {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id;
     @ColumnInfo(name = "name")
     public String name;
@@ -21,20 +21,8 @@ public class Recipe {
     @ColumnInfo(name = "steps")
     public ArrayList<Step> steps;
 
-    // TODO : améliorer ça
-    public Recipe() {};
-
-    /*public Recipe(String name, String imgUrl) {
-        this.name = name;
-        this.imgUrl = imgUrl;
+    public Recipe() {
     }
-
-    public Recipe(String name, String imgUrl, ArrayList<QuantifiedIngredient> quantifiedIngredients, ArrayList<Step> steps) {
-        this.name = name;
-        this.imgUrl = imgUrl;
-        this.quantifiedIngredients = quantifiedIngredients;
-        this.steps = steps;
-    }*/
 
     public String getName() {
         return name;

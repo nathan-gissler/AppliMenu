@@ -21,9 +21,6 @@ import com.example.applimenu.entities.Step;
 import java.util.ArrayList;
 
 public class RecipeBookActivity extends AppCompatActivity {
-    private RecyclerView recyclerFavoriteRecipes;
-
-    private RecyclerView recyclerPersonalRecipes;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,7 +29,7 @@ public class RecipeBookActivity extends AppCompatActivity {
 
         RecipeDao recipeDao = AppDatabaseSingleton.getInstance(this).recipeDao();
 
-        recyclerFavoriteRecipes = findViewById(R.id.recyclerFavoriteRecipes);
+        RecyclerView recyclerFavoriteRecipes = findViewById(R.id.recyclerFavoriteRecipes);
 
         ArrayList<Recipe> favoriteRecipes = new ArrayList<>();
         Recipe recipe1 = new Recipe();
@@ -87,7 +84,7 @@ public class RecipeBookActivity extends AppCompatActivity {
         recyclerFavoriteRecipes.setAdapter(favoriteRecipesAdapter);
         recyclerFavoriteRecipes.setLayoutManager((new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)));
 
-        recyclerPersonalRecipes = findViewById(R.id.recyclerPersonalRecipes);
+        RecyclerView recyclerPersonalRecipes = findViewById(R.id.recyclerPersonalRecipes);
 
         ArrayList<Recipe> personalRecipes = new ArrayList<>(recipeDao.getAll());
 

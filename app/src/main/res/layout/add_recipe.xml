@@ -19,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/add_recipe"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -37,8 +38,9 @@
         android:id="@+id/editTextAddRecipeName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/edit_text_add_recipe_name"
         android:inputType="text"
-        android:text="@string/edit_text_add_recipe_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textAddRecipeName" />
@@ -64,8 +66,8 @@
         android:id="@+id/editTextAddRecipeIngredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/edit_text_add_recipe_ingredient"
         android:inputType="text"
-        android:text="@string/edit_text_add_recipe_ingredient"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/editTextAddRecipeIngredientQuantity"
         app:layout_constraintTop_toBottomOf="@id/recyclerAddIngredient" />
@@ -74,17 +76,18 @@
         android:id="@+id/editTextAddRecipeIngredientQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="@string/edit_text_add_recipe_ingredient_quantity"
         android:inputType="number"
-        android:text="@string/edit_text_add_recipe_ingredient_quantity"
         app:layout_constraintLeft_toRightOf="@id/editTextAddRecipeIngredient"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerAddIngredient"/>
+        app:layout_constraintTop_toBottomOf="@id/recyclerAddIngredient" />
 
     <Button
         android:id="@+id/buttonAddRecipeIngredient"
         style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="@string/button_add_recipe_ingredient"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -111,11 +114,11 @@
         android:id="@+id/editTextAddRecipeStep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/edit_text_add_recipe_step"
         android:inputType="text"
-        android:text="@string/edit_text_add_recipe_step"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerAddStep"/>
+        app:layout_constraintTop_toBottomOf="@id/recyclerAddStep" />
 
     <Button
         android:id="@+id/buttonAddRecipeStep"

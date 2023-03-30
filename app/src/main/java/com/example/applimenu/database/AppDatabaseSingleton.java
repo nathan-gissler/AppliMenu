@@ -9,7 +9,7 @@ public class AppDatabaseSingleton {
 
     public static AppDatabase getInstance(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "app-database").allowMainThreadQueries().build();
+            instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "app-database").fallbackToDestructiveMigration().allowMainThreadQueries().build();
         }
         return instance;
     }
